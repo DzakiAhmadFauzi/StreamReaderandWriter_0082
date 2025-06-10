@@ -26,7 +26,22 @@ int main() {
         //selesai dalam menulis sekarang tutup filenya
         outfile.close();
         //Membuka file dalam mode membaca
-        
+        ifstream infile;
+        //menunjuk ke sebuah nama file
+        infile.open("contohfile.txt");
+        cout << endl << ">= Membuka dan membaca file " << endl;
+        //jika file ada maka
+        if (infile.is_open())
+        {
+            //melakukan perulangan setiap baris
+            while (getline(infile, baris))
+            {
+                //dan tampilkan di sini
+                cout << baris << '\n';
+            }
+            //tutup file tersebut setelah selesai
+            
+        }
 
                 
 
